@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;" *ngFor=" let restaurant of restaurants">
+    <img [src]="restaurant.image1"  class="card-img-top" alt="...">
+    <div class="card-body">
+      <h6 class="card-title">{{ restaurant.type_cuisine }}</h6>
+      <h5 class="card-title">{{ restaurant.name }}</h5>
+      <p class="card-text">{{ restaurant.city }}</p>
+      <p class="card-text">{{ restaurant.note }}</p>
+      <p class="card-text">{{ restaurant.range_price }}</p>
+      <button class="btn btn-lg btn-primary" type="submit" [routerLink]="['/restaurants/detail', restaurant.id]">Voir plus</button>
+    </div>
+  </div>
