@@ -1,11 +1,10 @@
 <div class="card" style="width: 18rem;" >
-    <img [src]="restaurant?.image1"  class="card-img-top" alt="...">
-    <img [src]="restaurant?.image2"  class="card-img-top" alt="...">
-    <img [src]="restaurant?.image3"  class="card-img-top" alt="...">
     <div class="card-body" >
       <h5 class="card-title">{{ restaurant?.name}}</h5>
       <p class="card-text">{{ restaurant?.descriptif}}</p>
       <p class="card-text">{{ restaurant?.type_cuisine }}</p>
-      
     </div>
+    <app-carousel [page]="'restaurant'" [data]="restaurant"></app-carousel>
+    <app-datepicker></app-datepicker>
+    <a [routerLink]="['/home']">Retour</a>
   </div>

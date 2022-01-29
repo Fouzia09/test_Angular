@@ -3,16 +3,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="navbar-brand" routerLink="restaurants">Restaurant</a>
+            <a class="navbar-brand" routerLink=""><img src="../../../assets/logo_size.jpg" alt="" width="100" height="50"></a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" routerLink="restaurant/detail">Detail</a>
+            <a class="navbar-brand" routerLink="">Detail</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input type="text" id="inputCity" [(ngModel)]="inputName" [ngModelOptions]="{standalone: true}" placeholder="saisir la ville"/>
-          <button class="btn btn-outline-success" type="submit" (click)="Filter()">Search</button>
-        </form>
       </div>
     </div>
   </nav>

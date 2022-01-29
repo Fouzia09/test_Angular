@@ -1,0 +1,8 @@
+<div class="container">
+    <mat-card class="inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <p *ngIf="selected">{{ selected | date :'fullDate' }} at {{ selected | date :'shortTime'}}</p>
+</div>
+
+ 

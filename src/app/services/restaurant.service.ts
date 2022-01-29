@@ -30,4 +30,5 @@ export class RestaurantService {
   updateRestaurant(restaurant: Restaurant, id: number):Observable<Restaurant>{
     return this.http.put<Restaurant>(`${baseUrl}/restaurants/${id}`, restaurant);
   }
+  
 }
