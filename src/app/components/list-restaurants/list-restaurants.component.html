@@ -1,6 +1,6 @@
 <div class="container">
   <form class="d-flex">
-    <input type="text" id="inputCity" [(ngModel)]="inputName" [ngModelOptions]="{standalone: true}" placeholder="saisir la ville"/>
+    <input type="text" id="inputCity" [(ngModel)]="inputName" [ngModelOptions]="{standalone: true}" placeholder="saisir le nom du restaurant"/>
     <button class="btn btn-outline-success" type="submit" (click)="filterSearch()">Search</button>
   </form>
   <div class="card" style="width: 18rem;" *ngFor=" let restaurant of restaurants">

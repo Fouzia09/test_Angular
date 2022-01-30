@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Restaurant } from 'src/app/interface/restaurant';
 import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 })
 export class DetailsRestaurantsComponent implements OnInit {
 
-  restaurant!: Restaurant;
+  restaurant!: any;
 
   constructor(private route: ActivatedRoute, private restaurantService: RestaurantService) { 
     
@@ -18,8 +17,12 @@ export class DetailsRestaurantsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    this.restaurantService.showRestaurant(id).subscribe((res: Restaurant) => {
-      this.restaurant = res
+    this.restaurantService.showRestaurant(id).subscribe({
+      next: (restaurant)=>{
+        this.restaurant = restaurant
+       console.log(restaurant);
+       
+      }
     })
       
   }
