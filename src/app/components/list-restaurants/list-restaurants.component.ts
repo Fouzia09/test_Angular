@@ -13,6 +13,7 @@ export class ListRestaurantsComponent implements OnInit {
   restaurants!: Restaurant[]
   filteredItems!: Restaurant[];
   inputName: string = '';
+  listMore!: any;
 
   constructor( private restaurantService: RestaurantService) {
     this.filteredItems = this.filteredItems;
@@ -24,8 +25,7 @@ export class ListRestaurantsComponent implements OnInit {
     })
     
   }
-
-
+  // Methode qui permet de faire la recherche par nom de restaurant
   filterSearch(){
     this.filteredItems = [];
     if(this.inputName != ""){
@@ -40,4 +40,9 @@ export class ListRestaurantsComponent implements OnInit {
     }
   }
 
+   // Methode qui permet d'afficher la suite des elements'
+  showMore() {
+    this.listMore = this.restaurants.slice(4)
+    console.log(this.listMore)
+  }
 }

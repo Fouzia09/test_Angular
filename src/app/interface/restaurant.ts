@@ -1,5 +1,4 @@
 export interface Restaurant{
-    [x: string]: any;
     id?: number,
     name: string,
     type_cuisine: string,
