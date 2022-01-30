@@ -1,0 +1,56 @@
+<div class="wrapper">
+  <h2 class="title-color text-success font-weight-bold">Création d'un Restaurant</h2>
+  <form class="row g-3" [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="inputName" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="inputName" formControlName="restaurantName">
+    </div>
+    <div class="col-md-6">
+      <label for="inputType" class="form-label">Type cuisine</label>
+      <input type="name" class="form-control" id="inputType" formControlName="restaurantType">
+    </div>
+    <div class="col-6">
+      <label for="inputCity" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="inputCity" formControlName="restaurantCity">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Descriptif</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+        formControlName="restaurantDescriptif"></textarea>
+    </div>
+    <div class="col-8">
+      <label for="inputPrice" class="form-label">Prix</label>
+      <input type="text" class="form-control" id="inputPrice" formControlName="restaurantPrice">
+    </div>
+    <div class="col-6">
+        <mat-accordion>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Ajouter images
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="row">
+              <div class="col-12">
+                <label for="image1" class="form-label">Image1</label>
+                <input type="text" class="form-control" id="image1" formControlName="restaurantImage1">
+              </div>
+              <div class="col-12">
+                <label for="image2" class="form-label">Image2</label>
+                <input type="text" class="form-control" id="image2" formControlName="restaurantImage2">
+              </div>
+              <div class="col-12">
+                <label for="image3" class="form-label">Image3</label>
+                <input type="text" class="form-control" id="image3" formControlName="restaurantImage3">
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState">
+          </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </div>
+  </form>
+</div>
