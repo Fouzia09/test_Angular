@@ -1,35 +1,44 @@
 <div class="container">
   <!-- Champs de recherche -->
-  <form class="d-flex">
-    <input type="text" id="inputCity" [(ngModel)]="inputName" [ngModelOptions]="{standalone: true}" placeholder="saisir le nom du restaurant"/>
-    <button class="btn btn-outline-success" type="submit" (click)="filterSearch()">Search</button>
+  <form class="d-flex justify-content-center">
+    <input type="text" id="inputCity" [(ngModel)]="inputName" [ngModelOptions]="{standalone: true}"
+      placeholder="Saisir le nom du restaurant" />
+    <button class="btn btn-outline-success" type="submit" (click)="filterSearch()">Chercher</button>
   </form>
-   <!-- Affichage de 4 elements sur la liste -->
-  <div class="card" style="width: 18rem;" *ngFor=" let restaurant of restaurants | slice:0:4; let i=index">
-    <img [src]="restaurant.image1"  class="card-img-top" alt="...">
-    <div class="card-body">
-      <h6 class="card-title">{{ restaurant.id }}</h6>
-      <h6 class="card-title">{{ restaurant.type_cuisine }}</h6>
-      <h5 class="card-title">{{ restaurant.name }}</h5>
-      <p class="card-text">{{ restaurant.city }}</p>
-      <p class="card-text">{{ restaurant.note }}</p>
-      <p class="card-text">{{ restaurant.range_price }}</p>
-      <button class="btn btn-lg btn-primary" type="submit" [routerLink]="['/restaurants/', restaurant.id]">Voir plus</button>
+  <!-- Affichage de 4 elements sur la liste -->
+  <h3 class="title-color text-success font-weight-bold">Découvrez et réservez le meilleur restaurant</h3>
+  <div class="d-flex justify-content-around flex-wrap">
+    <div class="card" style="width: 18rem; cursor: pointer;" *ngFor=" let restaurant of restaurants | slice:0:4; let i=index" [routerLink]="['/restaurants/', restaurant.id]">
+      <img [src]="restaurant.image1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h6 class="card-title">{{ restaurant.type_cuisine }}</h6>
+        <div class="info">
+          <h5 class="card-title">{{ restaurant.name }}</h5>
+          <div class="note">
+            <p class="card-text">{{ restaurant.note }}</p>
+          </div>
+          
+        </div>
+        <p class="card-text">{{ restaurant.city }}</p>
+        <h6 class="card-title">Fourchette de prix: {{ restaurant.range_price }} €</h6>
+      </div>
     </div>
   </div>
-  <button class="btn btn-lg btn-secondary" (click)="showMore()">Afficher plus</button>
-   <!-- Affichage de la suite des elements de la liste -->
-  <div class="card" style="width: 18rem;" *ngFor=" let item of listMore">
-    <img [src]="item.image1"  class="card-img-top" alt="...">
-    <div class="card-body">
-      <h6 class="card-title">{{ item.id }}</h6>
-      <h6 class="card-title">{{ item.type_cuisine }}</h6>
-      <h5 class="card-title">{{ item.name }}</h5>
-      <p class="card-text">{{ item.city }}</p>
-      <p class="card-text">{{ item.note }}</p>
-      <p class="card-text">{{ item.range_price }}</p>
-      <button class="btn btn-lg btn-primary" type="submit" [routerLink]="['/restaurants/', item.id]">Voir plus</button>
+  <button class="btn btn-lg btn-secondary" (click)="showMore()" *ngIf="!listMore">Afficher plus</button>
+  <!-- Affichage de la suite des elements de la liste -->
+  <div class="d-flex justify-content-around flex-wrap">
+    <div class="card" style="width: 18rem; cursor: pointer;" *ngFor=" let item of listMore" [routerLink]="['/restaurants/', item.id]">
+      <img [src]="item.image1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h6 class="card-title">{{ item.type_cuisine }}</h6>
+        <div class="note">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.note }}</p>
+        </div>
+        <p class="card-text">{{ item.city }}</p>
+        <h6 class="card-title">Fourchette de prix: {{ item.range_price }} €</h6>
+      </div>
     </div>
   </div>
-</div>
 
+</div>

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { NewRestaurantComponent } from './pages/new-restaurant/new-restaurant.component';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     HomeComponent,
     DatepickerComponent,
     CarouselComponent,
+    NewRestaurantComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatCardModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

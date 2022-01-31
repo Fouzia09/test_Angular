@@ -1,0 +1,55 @@
+.container {
+    form {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        
+        input {
+            width: 400px;
+            height: 50px;
+            border: 2px solid silver;
+            border-radius: 21px;
+            padding: 0 12px;
+        }
+
+        .btn {
+            margin-left: 5px;
+            margin: initial;
+        }
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .card {
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        h6 {
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+
+            .note {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                text-align: center;
+                background-color: silver;
+                line-height: 30px;
+            }
+        }
+    }
+    .btn-secondary {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: rgb(88, 148, 66);
+        background-color: transparent;
+        width: 130px;
+        outline: none;
+    }
+}
+

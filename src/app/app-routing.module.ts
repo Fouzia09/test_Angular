@@ -1,3 +1,4 @@
+import { NewRestaurantComponent } from './pages/new-restaurant/new-restaurant.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailsRestaurantsComponent } from './components/details-restaurants/details-restaurants.component';
@@ -11,7 +12,10 @@ const routes: Routes = [
     path: 'restaurants/:id', component: DetailsRestaurantsComponent,
     
   },
-
+  { 
+    path: 'restaurant/new', component: NewRestaurantComponent,
+    
+  },
 ];
 
 @NgModule({
