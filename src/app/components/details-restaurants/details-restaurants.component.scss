@@ -1,13 +1,60 @@
-.author {
-    span {
-        justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-        border-radius: 50%;
-        color: #1b968d;
-        background: #c4f4f0;
-    }
-}
-li {
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  li {
     list-style: none;
+  }
+  .col-xs-12 {
+    .col {
+      h6 {
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      p {
+        font-weight: 300;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+    .row {
+        h5 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .comment {
+          padding-top: 20px;
+          border-bottom: 1px solid silver;
+    
+          .pseudo {
+            width: 100%;
+            margin-left: 5px;
+            p {
+                margin-bottom: 0;
+                font-weight: 300;
+              }
+              .date {
+                  font-style: italic;
+                  font-weight: 300;
+              }
+          }
+          p {
+            font-weight: 300;
+          }
+        }
+    
+        .note {
+          span {
+            font-weight: 700;
+          }
+    
+        }
+      }
+  }
+  .col-md-6 {
+    h5 {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
 }

@@ -1,7 +1,7 @@
-<div class="container">
-    <mat-card class="inline-calendar-card">
+<div class="container col-xs-12 col-md-12 col-sm-12">
+    <mat-card class="inline-calendar-card col-xs-12 col-md-8 col-sm-8">
         <mat-calendar [(selected)]="selected"></mat-calendar>
-      </mat-card>
-      <p *ngIf="selected">{{ selected | date :'fullDate' }} at {{ selected | date :'shortTime'}}</p>
+    </mat-card>
+      <p *ngIf="selected">Réservé pour le:<span> {{ selected | date :'fullDate' }} à {{ selected | date :'h:mm' }}</span></p>
 </div>
 

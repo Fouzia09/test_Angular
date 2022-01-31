@@ -1,3 +1,16 @@
 .container {
-    width: 300px;
+  .inline-calendar-card {
+    margin: auto;
+  }
+
+  p {
+    color: rgb(88, 148, 66);
+    padding-top: 15px;
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
 }

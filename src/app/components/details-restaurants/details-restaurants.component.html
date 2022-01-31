@@ -1,23 +1,37 @@
 <app-header></app-header>
-<div class="card" style="width: 18rem;" >
-    <div class="card-body" >
+<div class="container d-md-flex">
+  <div class="col-xs-12 col-md-7 col-sm-6">
+    <div class="col" >
       <h5 class="card-title">{{ restaurant?.name}}</h5>
+      <h6 class="card-text">Cuisine: {{ restaurant?.type_cuisine }}</h6>
+      <h6 class="card-text">{{ restaurant?.city }}</h6>
       <p class="card-text">{{ restaurant?.descriptif}}</p>
-      <p class="card-text">{{ restaurant?.type_cuisine }}</p>
     </div>
     <app-carousel [page]="'restaurant'" [data]="restaurant"></app-carousel>
-    <app-datepicker></app-datepicker>
-    <ul *ngFor='let elem of restaurant?.comments'>
-      <div class="author">
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" font-size="1.25rem" class="css-k2n18r e1sm7kro0"><g fill-rule="evenodd"><path d="M12 12.75c2.481 0 4.5-2.019 4.5-4.5V6c0-2.481-2.019-4.5-4.5-4.5A4.505 4.505 0 007.5 6v2.25c0 2.481 2.019 4.5 4.5 4.5"></path><path d="M15.75 15h-7.5a6.756 6.756 0 00-6.75 6.75c0 .414.336.75.75.75h19.5a.75.75 0 00.75-.75A6.756 6.756 0 0015.75 15"></path></g></svg>
-        </span>
-        <li >{{ elem.author }}</li>
-        <li >{{ elem.creatAt }}</li>
+    <div class="row">
+      <h5 class="title-color text-success font-weight-bold">Commentaires des utilisateurs</h5>
+      <div class="comment"*ngFor='let elem of restaurant?.comments'>
+        <div style="display: flex;">
+          <div class="circle">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" font-size="1.25rem" class="css-k2n18r e1sm7kro0"><g fill-rule="evenodd"><path d="M12 12.75c2.481 0 4.5-2.019 4.5-4.5V6c0-2.481-2.019-4.5-4.5-4.5A4.505 4.505 0 007.5 6v2.25c0 2.481 2.019 4.5 4.5 4.5"></path><path d="M15.75 15h-7.5a6.756 6.756 0 00-6.75 6.75c0 .414.336.75.75.75h19.5a.75.75 0 00.75-.75A6.756 6.756 0 0015.75 15"></path></g></svg>
+            </span>
+          </div>
+          <div class="pseudo">
+            <h6>{{ elem.author }}</h6>
+            <h6 class="date">{{ elem.creatAt }}</h6>
+          </div>
+          <div class="note">
+            <span>{{ elem.note }}/5</span>
+          </div>
+        </div>
+        <p style="margin-top: 20px;">{{ elem.content }}</p>
       </div>
-      <li >{{ elem.content }}</li>
-      <li >{{ elem.note }}/5</li>
-    </ul>
-    <a [routerLink]="['']">Retour</a>
+    </div>
   </div>
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <h5 class="title-color text-success font-weight-bold">Trouver une table</h5>
+    <app-datepicker></app-datepicker>
+  </div>
+</div>
 <app-footer></app-footer>

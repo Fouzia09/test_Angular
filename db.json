@@ -4,7 +4,7 @@
       "id": 1,
       "name": "L'Imperatif",
       "type_cuisine": "Française",
-      "descriptif": "Restaurant français très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum",
       "country": "France",
       "city": "Paris",
       "range_price": "15-40",
@@ -37,7 +37,7 @@
       "id": 2,
       "name": "Shika",
       "type_cuisine": "Asiatique",
-      "descriptif": "Restaurant asiatique très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum",
       "country": "France",
       "city": "Paris",
       "range_price": "20-40",
@@ -103,7 +103,7 @@
       "id": 4,
       "name": "La confidente",
       "type_cuisine": "Française",
-      "descriptif": "Restaurant français très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum",
       "country": "France",
       "city": "Nice",
       "range_price": "10-30",
@@ -136,7 +136,7 @@
       "id": 5,
       "name": "test",
       "type_cuisine": "Française",
-      "descriptif": "Restaurant français très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement",
       "country": "France",
       "city": "Paris",
       "range_price": "15-40",
@@ -169,7 +169,7 @@
       "id": 6,
       "name": "Shika",
       "type_cuisine": "Asiatique",
-      "descriptif": "Restaurant asiatique très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum",
       "country": "France",
       "city": "Paris",
       "range_price": "20-40",
@@ -235,7 +235,7 @@
       "id": 8,
       "name": "Le Paris",
       "type_cuisine": "Française",
-      "descriptif": "Restaurant français très bien situé",
+      "descriptif": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum",
       "country": "France",
       "city": "Nice",
       "range_price": "10-30",
@@ -263,32 +263,6 @@
           "note": 4
         }
       ]
-    },
-    {
-      "name": "Fouzia",
-      "type_cuisine": "chinoise",
-      "descriptif": "Hola",
-      "city": "SEVRAN",
-      "range_price": "20-30",
-      "image1": "img",
-      "image2": "img2",
-      "image3": "img3",
-      "note": "",
-      "comments": "",
-      "id": 9
-    },
-    {
-      "name": "Fouzia2",
-      "type_cuisine": "chinoise3",
-      "descriptif": "test",
-      "city": "SEVRAN",
-      "range_price": "20-30",
-      "image1": "img",
-      "image2": "img2",
-      "image3": "img3",
-      "note": "",
-      "comments": "",
-      "id": 10
     }
   ]
 }

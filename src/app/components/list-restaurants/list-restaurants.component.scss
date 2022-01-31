@@ -1,4 +1,6 @@
 .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
     form {
         margin-top: 25px;
         margin-bottom: 25px;
@@ -12,8 +14,9 @@
         }
 
         .btn {
-            margin-left: 5px;
             margin: initial;
+            margin-left: 5px;
+    
         }
     }
     h3 {
