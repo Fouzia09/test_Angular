@@ -4,7 +4,7 @@ export interface Restaurant{
     type_cuisine: string,
     descriptif: string,
     city: string,
-    range_price: 0,
+    range_price: number,
     image1: string,
     image2: string,
     image3: string,

@@ -11,6 +11,8 @@ import { Restaurant } from 'src/app/interface/restaurant';
 export class NewRestaurantComponent implements OnInit {
 
   panelOpenState = false;
+  success: boolean = false;
+  error: boolean = false;
   restaurantName!: FormControl;
   restaurantType!: FormControl;
   restaurantCity!: FormControl;
@@ -51,12 +53,12 @@ export class NewRestaurantComponent implements OnInit {
       comments: ''
     }
     this.restaurantService.postRestaurant(body).subscribe(
-      (data: any)=>{
-        console.log('OK');
+      (data)=>{
+        this.success = true;
        
       },
-      (error: any)=>{
-        console.log('PAS ENVOYE');
+      (error)=>{
+        this.error = true;
       }
     );
   }

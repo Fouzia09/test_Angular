@@ -24,9 +24,9 @@
       </div>
     </div>
   </div>
-  <button class="btn btn-lg btn-secondary" (click)="showMore()" *ngIf="!listMore">Afficher plus</button>
+  <button class="btn btn-lg btn-secondary" (click)="showMore()" *ngIf="!listMore && !filteredItems">Afficher plus</button>
   <!-- Affichage de la suite des elements de la liste -->
-  <div class="d-flex justify-content-around flex-wrap">
+  <div class="d-flex justify-content-around flex-wrap" *ngIf="!filteredItems">
     <div class="card" style="width: 18rem; cursor: pointer;" *ngFor=" let item of listMore" [routerLink]="['/restaurants/', item.id]">
       <img [src]="item.image1" class="card-img-top" alt="...">
       <div class="card-body">
